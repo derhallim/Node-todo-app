@@ -16,17 +16,17 @@ MongoClient.connect('mongodb://localhost:27017/TodosApp', (err, db) => {
     // });
 
 
-    // db.collection('Users').insertOne({
-    //         name: 'Mohamed Derhalli', 
-    //         age : 30, 
-    //         location: 'Mars'
-    //     },
-    //     (error, result) => {
-    //         if (error)
-    //             return console.log('Unable to add user', error);
+    db.collection('Users').insertOne({
+            name: 'Mohamed Derhalli', 
+            age : 30, 
+            location: 'Mars'
+        },
+        (error, result) => {
+            if (error)
+                return console.log('Unable to add user', error);
 
-    //         console.log(JSON.stringify(result.ops, undefined, 2));
-    //     })
+            console.log(JSON.stringify(result.ops, undefined, 2));
+        })
 
 
     db.close();
