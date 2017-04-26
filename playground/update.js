@@ -10,6 +10,9 @@ MongoClient.connect('mongodb://localhost:27017/TodosApp', (err, db) => {
     }, {
             $set: {
                 name: 'John Smith'
+            }, 
+            $inc: {
+                age: 1 
             }
         }, {
             returnOriginal: false

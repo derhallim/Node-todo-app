@@ -10,8 +10,9 @@ MongoClient.connect('mongodb://localhost:27017/TodosApp', (err, db) => {
     console.log(JSON.stringify(docs, undefined, 2));
   }, (err) => {
       console.log('Unable to get users', err)
-  })
+  });
 
+  
 
     db.close();
 });
